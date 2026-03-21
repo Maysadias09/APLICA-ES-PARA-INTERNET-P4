@@ -1,0 +1,199 @@
+/* ======================
+   RESET
+====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ======================
+   BASE
+====================== */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* ======================
+   HEADER
+====================== */
+header {
+    background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #0267ff;
+}
+
+nav a:focus {
+    outline: 2px solid #00c3ff;
+}
+
+/* ======================
+   LAYOUT
+====================== */
+main {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    flex: 2;
+}
+
+aside {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ======================
+   CARDS
+====================== */
+article {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #111;
+}
+
+/* ======================
+   FORMULÁRIO
+====================== */
+form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-top: 20px;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* INPUTS BASE */
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc; /* cinza inicial */
+    transition: 0.3s;
+}
+
+/* FOCO */
+input:focus {
+    border-color: #00c3ff;
+    outline: 2px solid #00c3ff;
+}
+
+/* VALIDAÇÃO INTELIGENTE */
+
+/* Válido */
+input:required:valid {
+    border-color: #28a745;
+}
+
+/* Inválido (somente após interação) */
+input:required:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+/* BOTÃO */
+button {
+    margin-top: 15px;
+    background: linear-gradient(135deg, #054ba7, #0063d4);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* ======================
+   VÍDEO
+====================== */
+video {
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* ======================
+   FOOTER
+====================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f1f;
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* ======================
+   RESPONSIVO
+====================== */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
